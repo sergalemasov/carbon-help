@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  /* all the containers should be at least 100% to take whole height of viewport */
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  line-height: 100px;
+
+  /* it lets content lie on header */
+  height: 100px;
+  margin-bottom: -100px;
+
+  text-align: center;
+  background-color: yellow;
+}
+
+#container {
+  /* don't forget the padding it is essential for prohibiting child collision with header */
+  padding-top: 100px;
+  height: 100%;
+  /* the magic for centering of child element is flex parent container */
+  display: flex;
+}
+
+#centered {
+  /* and margin auto auto for the child */
+  margin: auto auto;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: green;
+}
